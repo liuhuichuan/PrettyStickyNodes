@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="76" y1="36" x2="829" y2="627" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A2E67"/>
+      <stop offset="0.52" stop-color="#124C9E"/>
+      <stop offset="1" stop-color="#071A45"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="219" y1="93" x2="687" y2="557" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B71D1"/>
+      <stop offset="0.48" stop-color="#0F3C94"/>
+      <stop offset="1" stop-color="#06205C"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="292" y1="174" x2="634" y2="495" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FBFF"/>
+      <stop offset="1" stop-color="#D7E9FA"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="292" y1="118" x2="549" y2="219" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8BD7FF" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#8BD7FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="170" y="70" width="560" height="535" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020A20" flood-opacity=".45"/>
+    </filter>
+    <filter id="soft" x="230" y="150" width="440" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="11" stdDeviation="12" flood-color="#05183D" flood-opacity=".28"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="650" rx="36" fill="url(#bg)"/>
+  <circle cx="105" cy="120" r="180" fill="#2D83EE" opacity=".16"/>
+  <circle cx="798" cy="560" r="220" fill="#13C7D8" opacity=".10"/>
+  <path d="M0 552C203 482 302 624 512 565C688 516 724 438 900 470V650H0V552Z" fill="#031434" opacity=".36"/>
+
+  <g filter="url(#shadow)">
+    <rect x="205" y="75" width="490" height="500" rx="32" fill="url(#shell)"/>
+    <path d="M237 107C237 89.327 251.327 75 269 75H631C648.673 75 663 89.327 663 107V180H237V107Z" fill="#0A2B72" opacity=".62"/>
+    <path d="M237 107C237 89.327 251.327 75 269 75H631C648.673 75 663 89.327 663 107V162C560 184 390 162 237 137V107Z" fill="url(#glow)"/>
+    <circle cx="244" cy="106" r="6" fill="#7CEBFF"/>
+    <circle cx="264" cy="106" r="6" fill="#4BC8FF"/>
+    <circle cx="284" cy="106" r="6" fill="#2A8DF0"/>
+    <text x="315" y="118" fill="#EAF6FF" font-family="Segoe UI, Inter, sans-serif" font-size="17" font-weight="600" letter-spacing="2">TODAY</text>
+    <text x="315" y="146" fill="#91C8FA" font-family="Segoe UI, Inter, sans-serif" font-size="12" letter-spacing="1.5">THURSDAY · 19 NOV 2026</text>
+    <path d="M599 113h40" stroke="#8FC8FF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    <path d="M599 126h25" stroke="#8FC8FF" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+    <g filter="url(#soft)">
+      <rect x="264" y="178" width="372" height="360" rx="24" fill="url(#paper)"/>
+      <path d="M264 178H636V226C550 243 400 218 264 203V178Z" fill="#FFFFFF" opacity=".42"/>
+      <text x="292" y="222" fill="#0B2556" font-family="Segoe UI, Inter, sans-serif" font-size="23" font-weight="700">Quick capture</text>
+      <text x="292" y="246" fill="#6C86A4" font-family="Segoe UI, Inter, sans-serif" font-size="12">A small list for a clear mind</text>
+      <path d="M292 266H608" stroke="#B8D0EA" stroke-width="1"/>
+
+      <g font-family="Segoe UI, Inter, sans-serif">
+        <circle cx="308" cy="302" r="10" fill="#1B6DCA"/>
+        <path d="M303 302l3 3 7-8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="335" y="308" fill="#45617F" font-size="15" text-decoration="line-through">Review project notes</text>
+        <text x="574" y="307" fill="#86A1BE" font-size="11">09:30</text>
+
+        <circle cx="308" cy="357" r="10" fill="#1B6DCA"/>
+        <path d="M303 357l3 3 7-8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="335" y="363" fill="#45617F" font-size="15" text-decoration="line-through">Send the weekly update</text>
+        <text x="574" y="362" fill="#86A1BE" font-size="11">11:00</text>
+
+        <circle cx="308" cy="412" r="10" fill="#D9E8F7" stroke="#4F8DD0" stroke-width="2"/>
+        <text x="335" y="418" fill="#0B2556" font-size="15" font-weight="600">Polish the home screen</text>
+        <text x="574" y="417" fill="#2B6FB7" font-size="11">14:30</text>
+
+        <circle cx="308" cy="467" r="10" fill="#D9E8F7" stroke="#4F8DD0" stroke-width="2"/>
+        <text x="335" y="473" fill="#0B2556" font-size="15" font-weight="600">Take a proper break</text>
+        <text x="574" y="472" fill="#2B6FB7" font-size="11">16:00</text>
+      </g>
+      <path d="M292 495H608" stroke="#B8D0EA" stroke-width="1"/>
+      <text x="292" y="520" fill="#6C86A4" font-family="Segoe UI, Inter, sans-serif" font-size="11" letter-spacing="1">2 OF 4 COMPLETED</text>
+      <rect x="507" y="508" width="101" height="7" rx="3.5" fill="#B8D0EA"/>
+      <rect x="507" y="508" width="50" height="7" rx="3.5" fill="#2384D6"/>
+    </g>
+  </g>
+  <text x="450" y="615" text-anchor="middle" fill="#A6D5FF" font-family="Segoe UI, Inter, sans-serif" font-size="12" letter-spacing="3" opacity=".8">GEM NOTE · FOCUS LIGHTLY</text>
+</svg>

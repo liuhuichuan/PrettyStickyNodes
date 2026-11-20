@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="500" viewBox="0 0 490 500" fill="none">
+<defs>
+ <linearGradient id="shell" x1="20" y1="10" x2="470" y2="490" gradientUnits="userSpaceOnUse"><stop stop-color="#2B71D1"/><stop offset=".48" stop-color="#0F3C94"/><stop offset="1" stop-color="#06205C"/></linearGradient>
+ <linearGradient id="paper" x1="80" y1="103" x2="430" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#F5FBFF"/><stop offset="1" stop-color="#D7E9FA"/></linearGradient>
+ <linearGradient id="glow" x1="80" y1="20" x2="350" y2="130" gradientUnits="userSpaceOnUse"><stop stop-color="#8BD7FF" stop-opacity=".5"/><stop offset="1" stop-color="#8BD7FF" stop-opacity="0"/></linearGradient>
+ <filter id="shadow" x="-30" y="-30" width="550" height="570" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020A20" flood-opacity=".45"/></filter>
+ <filter id="soft" x="30" y="80" width="430" height="450" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="11" stdDeviation="12" flood-color="#05183D" flood-opacity=".28"/></filter>
+</defs>
+<g filter="url(#shadow)">
+ <rect x="5" y="5" width="480" height="490" rx="32" fill="url(#shell)"/>
+ <path d="M37 37C37 19.3 51.3 5 69 5H421C438.7 5 453 19.3 453 37V110H37V37Z" fill="#0A2B72" opacity=".62"/>
+ <path d="M37 37C37 19.3 51.3 5 69 5H421C438.7 5 453 19.3 453 37V92C350 114 190 92 37 67V37Z" fill="url(#glow)"/>
+ <circle cx="44" cy="36" r="6" fill="#7CEBFF"/><circle cx="64" cy="36" r="6" fill="#4BC8FF"/><circle cx="84" cy="36" r="6" fill="#2A8DF0"/>
+ <text x="115" y="48" fill="#EAF6FF" font-family="Segoe UI, Inter, sans-serif" font-size="17" font-weight="600" letter-spacing="2">TODAY</text>
+ <text x="115" y="76" fill="#91C8FA" font-family="Segoe UI, Inter, sans-serif" font-size="12" letter-spacing="1.5">THURSDAY · 19 NOV 2026</text>
+ <path d="M399 43h40M399 56h25" stroke="#8FC8FF" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+ <g filter="url(#soft)"><rect x="32" y="108" width="426" height="360" rx="24" fill="url(#paper)"/>
+  <path d="M32 108H458V156C372 173 168 148 32 133V108Z" fill="#fff" opacity=".42"/>
+  <text x="60" y="152" fill="#0B2556" font-family="Segoe UI, Inter, sans-serif" font-size="23" font-weight="700">Quick capture</text>
+  <text x="60" y="176" fill="#6C86A4" font-family="Segoe UI, Inter, sans-serif" font-size="12">A small list for a clear mind</text><path d="M60 196H430" stroke="#B8D0EA"/>
+  <g font-family="Segoe UI, Inter, sans-serif"><circle cx="76" cy="232" r="10" fill="#1B6DCA"/><path d="M71 232l3 3 7-8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="103" y="238" fill="#45617F" font-size="15" text-decoration="line-through">Review project notes</text><text x="398" y="237" fill="#86A1BE" font-size="11">09:30</text>
+  <circle cx="76" cy="287" r="10" fill="#1B6DCA"/><path d="M71 287l3 3 7-8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="103" y="293" fill="#45617F" font-size="15" text-decoration="line-through">Send the weekly update</text><text x="398" y="292" fill="#86A1BE" font-size="11">11:00</text>
+  <circle cx="76" cy="342" r="10" fill="#D9E8F7" stroke="#4F8DD0" stroke-width="2"/><text x="103" y="348" fill="#0B2556" font-size="15" font-weight="600">Polish the home screen</text><text x="398" y="347" fill="#2B6FB7" font-size="11">14:30</text>
+  <circle cx="76" cy="397" r="10" fill="#D9E8F7" stroke="#4F8DD0" stroke-width="2"/><text x="103" y="403" fill="#0B2556" font-size="15" font-weight="600">Take a proper break</text><text x="398" y="402" fill="#2B6FB7" font-size="11">16:00</text></g>
+  <path d="M60 425H430" stroke="#B8D0EA"/><text x="60" y="450" fill="#6C86A4" font-family="Segoe UI, Inter, sans-serif" font-size="11" letter-spacing="1">2 OF 4 COMPLETED</text><rect x="310" y="438" width="120" height="7" rx="3.5" fill="#B8D0EA"/><rect x="310" y="438" width="60" height="7" rx="3.5" fill="#2384D6"/>
+ </g>
+</g></svg>

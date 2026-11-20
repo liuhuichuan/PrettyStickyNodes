@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="560" viewBox="0 0 1260 560" fill="none">
+<defs>
+ <linearGradient id="shell" x1="0" y1="0" x2="320" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#2B78D8"/><stop offset=".52" stop-color="#174FA7"/><stop offset="1" stop-color="#08275F"/></linearGradient>
+ <linearGradient id="paper" x1="0" y1="0" x2="300" y2="370" gradientUnits="userSpaceOnUse"><stop stop-color="#F8FCFF"/><stop offset="1" stop-color="#D8E8F8"/></linearGradient>
+ <filter id="shadow" x="-40" y="-20" width="420" height="580" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#06183D" flood-opacity=".28"/></filter>
+</defs>
+<rect width="1260" height="560" rx="28" fill="#EDF4FB"/>
+<text x="630" y="46" text-anchor="middle" fill="#0B2A5C" font-family="Segoe UI, Inter, sans-serif" font-size="22" font-weight="700">Completion feedback</text>
+<text x="630" y="72" text-anchor="middle" fill="#6C86A4" font-family="Segoe UI, Inter, sans-serif" font-size="13">Tap the circle, show feedback, then clear the completed task</text>
+
+<!-- state 1 -->
+<g transform="translate(70 108)" filter="url(#shadow)">
+ <rect width="320" height="390" rx="24" fill="url(#shell)"/>
+ <path d="M0 24C0 10.7 10.7 0 24 0H296C309.3 0 320 10.7 320 24V78H0V24Z" fill="#0B327A" opacity=".72"/>
+ <text x="24" y="34" fill="#F1F8FF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">QUICK NOTE</text>
+ <text x="24" y="56" fill="#9DCEFA" font-family="Segoe UI, Inter, sans-serif" font-size="10">BEFORE</text>
+ <path d="M282 25l12 12M294 25l-12 12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+ <rect x="24" y="96" width="272" height="270" rx="16" fill="url(#paper)"/>
+ <text x="44" y="132" fill="#0C2A5B" font-family="Segoe UI, Inter, sans-serif" font-size="18" font-weight="700">Today’s focus</text>
+ <path d="M44 148H276" stroke="#BDD3EA"/>
+ <g font-family="Segoe UI, Inter, sans-serif" font-size="12"><circle cx="56" cy="177" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="181" fill="#0C2A5B">Polish the home screen</text><circle cx="56" cy="220" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="224" fill="#0C2A5B">Take a proper break</text><circle cx="56" cy="263" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="267" fill="#0C2A5B">Write release notes</text></g>
+ <text x="44" y="336" fill="#6C86A4" font-family="Segoe UI, Inter, sans-serif" font-size="10" letter-spacing="1">3 TASKS LEFT</text>
+</g>
+<text x="230" y="530" text-anchor="middle" fill="#164B96" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">1 · Tap to complete</text>
+
+<!-- state 2 -->
+<g transform="translate(470 108)" filter="url(#shadow)">
+ <rect width="320" height="390" rx="24" fill="url(#shell)"/>
+ <path d="M0 24C0 10.7 10.7 0 24 0H296C309.3 0 320 10.7 320 24V78H0V24Z" fill="#0B327A" opacity=".72"/>
+ <text x="24" y="34" fill="#F1F8FF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">QUICK NOTE</text>
+ <text x="24" y="56" fill="#9DCEFA" font-family="Segoe UI, Inter, sans-serif" font-size="10">FEEDBACK</text>
+ <path d="M282 25l12 12M294 25l-12 12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+ <rect x="24" y="96" width="272" height="270" rx="16" fill="url(#paper)"/>
+ <text x="44" y="132" fill="#0C2A5B" font-family="Segoe UI, Inter, sans-serif" font-size="18" font-weight="700">Today’s focus</text>
+ <path d="M44 148H276" stroke="#BDD3EA"/>
+ <g font-family="Segoe UI, Inter, sans-serif" font-size="12"><circle cx="56" cy="177" r="8" fill="#1E73CC"/><path d="M52 177l3 3 6-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="76" y="181" fill="#6F87A2" text-decoration="line-through">Polish the home screen</text><circle cx="56" cy="220" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="224" fill="#0C2A5B">Take a proper break</text><circle cx="56" cy="263" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="267" fill="#0C2A5B">Write release notes</text></g>
+ <rect x="42" y="310" width="236" height="36" rx="12" fill="#0B2A60"/><text x="57" y="333" fill="#fff" font-family="Segoe UI, Inter, sans-serif" font-size="12">Task completed</text><text x="237" y="333" text-anchor="end" fill="#8FD4FF" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Undo</text>
+</g>
+<text x="630" y="530" text-anchor="middle" fill="#164B96" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">2 · Show feedback + Undo</text>
+
+<!-- state 3 -->
+<g transform="translate(870 108)" filter="url(#shadow)">
+ <rect width="320" height="390" rx="24" fill="url(#shell)"/>
+ <path d="M0 24C0 10.7 10.7 0 24 0H296C309.3 0 320 10.7 320 24V78H0V24Z" fill="#0B327A" opacity=".72"/>
+ <text x="24" y="34" fill="#F1F8FF" font-family="Segoe UI, Inter, sans-serif" font-size="15" font-weight="700">QUICK NOTE</text>
+ <text x="24" y="56" fill="#9DCEFA" font-family="Segoe UI, Inter, sans-serif" font-size="10">AFTER 250 MS</text>
+ <path d="M282 25l12 12M294 25l-12 12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+ <rect x="24" y="96" width="272" height="270" rx="16" fill="url(#paper)"/>
+ <text x="44" y="132" fill="#0C2A5B" font-family="Segoe UI, Inter, sans-serif" font-size="18" font-weight="700">Today’s focus</text>
+ <path d="M44 148H276" stroke="#BDD3EA"/>
+ <g font-family="Segoe UI, Inter, sans-serif" font-size="12"><circle cx="56" cy="177" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="181" fill="#0C2A5B">Take a proper break</text><circle cx="56" cy="220" r="8" fill="#DCEAF8" stroke="#4F91D7" stroke-width="2"/><text x="76" y="224" fill="#0C2A5B">Write release notes</text></g>
+ <rect x="42" y="310" width="236" height="36" rx="12" fill="#0B2A60"/><text x="57" y="333" fill="#fff" font-family="Segoe UI, Inter, sans-serif" font-size="12">Task completed</text><text x="258" y="333" text-anchor="end" fill="#8FD4FF" font-family="Segoe UI, Inter, sans-serif" font-size="12" font-weight="700">Undo</text>
+</g>
+<text x="1030" y="530" text-anchor="middle" fill="#164B96" font-family="Segoe UI, Inter, sans-serif" font-size="14" font-weight="700">3 · Move up · Undo stays 5s</text>
+</svg>
+
