@@ -1,15 +1,15 @@
 # PrettyStickyNodes 产品需求与开发规格（PRD / MVP）
 
-版本：1.1
+版本：1.3
 更新日期：2026-11-26
 目标平台：Windows 10/11
 设计基准：[Figma 文件](https://www.figma.com/design/C4suWALokYjH30lU1UFgTr/Untitled)
 
-本次变更：纳入已确认的一窗多清单和右侧索引标签设计。
+本次变更：增加 Note 长内容备忘及高度/滚动规则，并补齐 Figma 第 9 页状态板。具体规格与验收见 [Note PRD](NOTE_SPEC.md)，其中 Note 的输入、保存和导航规则优先于 Task 规则。
 
 设计来源：[第 7 页 · 多清单与项目](https://www.figma.com/design/C4suWALokYjH30lU1UFgTr/Untitled?node-id=89-88)。本地设计源文件：[list-side-tabs.svg](../draft-assets/list-side-tabs.svg)。
 
-已确认：一窗多清单、右侧标签、Daily 固定保留、新建项目清单、独立事项与排序、项目重命名与归档。下文的名称限制、标签溢出、归档恢复入口、切换输入与撤销规则是本版补充的开发默认规则；归档和溢出菜单尚无独立视觉状态稿。
+已确认：一窗多清单、右侧标签、Daily 固定保留、新建项目清单、独立事项与排序、项目重命名与归档。下文的名称限制、标签溢出、归档恢复入口、切换输入与撤销规则是本版补充的开发默认规则；归档和溢出菜单参考第 9 页 L03～L06。
 
 ## 1. 产品目标
 
@@ -30,6 +30,8 @@ Figma 文件中的页面是静态状态稿，开发实现需复用主界面的�
 | `05 · 编辑事项` | 双击事项后的原位编辑 |
 | `06 · 手动排序` | 默认、悬停手柄、拖动中和一次性提示 |
 | `07 · 多清单与项目` | Daily、临时项目、右侧索引标签、新建清单 |
+| `08 · Task 与 Note` | 混合列表、添加类型、Note 基础编辑 |
+| `09 · Note 长内容状态板` | 全文阅读顶部/底部、编辑滚动、预览、未保存、保存失败、草稿恢复 |
 
 Figma 中的中文说明文字属于设计注释，不显示在应用窗口内。应用内标题和事项示例使用英文；实际事项由用户输入，允许 Unicode。`07 · 多清单与项目` 中的右侧标签属于窗口内导航，不是窗口外背景；开发时应保持当前清单与标题、列表、添加入口同步。
 
@@ -58,7 +60,7 @@ TodoItem {
 }
 
 AppState {
-  schemaVersion: 2
+  schemaVersion: 3
   window: { x?: integer, y?: integer, width: integer, height: integer }
   firstRunSortHintDismissed: boolean
   launchAtLogin: boolean
@@ -72,6 +74,7 @@ TodoList {
   kind: "daily" | "project"
   archived: boolean
   items: TodoItem[]
+  notes: Note[]             // 结构及版本 2 → 3 迁移见 NOTE_SPEC.md
   scrollOffset: integer
   createdAt: timestamp
   updatedAt: timestamp
@@ -168,6 +171,10 @@ TodoList {
 4. 空列表显示明确的空状态和 `+ Add task`，用户无需猜测添加位置。
 5. 滚动时不能带动标题栏、关闭按钮或底部添加入口。
 
+### 5.9 Note 长内容备忘
+
+Note 为清单内独立内容类型，与 Task 共存；摘要最多两行，全文阅读/编辑使用固定可用视口并内部滚动，不自动撑大窗口。底部入口改为 + Add，支持 Task / Note。详见 [Note PRD](NOTE_SPEC.md) 与 Figma 第 9 页状态板，包含 NOTE-01～NOTE-14 专项测试；下节原有快捷键适用于 Task，Note 正文 Enter 换行、Ctrl+Enter 保存。
+
 ## 6. 键盘与可访问性
 
 - `Tab` 顺序：关闭按钮 -> 清单标签及新建/更多入口 -> 列表事项完成控件/文本 -> Add task -> 托盘相关不可见控件不进入窗口 Tab 顺序。
@@ -229,6 +236,7 @@ TodoList {
 - 与 Figma `05 · 编辑事项` 对比：蓝色细边框、原位编辑、Enter/Esc 提示一致。
 - 与 Figma `06 · 手动排序` 对比：默认/悬停/拖动三个状态可辨认；插入线不穿过文本；一次性提示只出现一次。
 - 与 Figma `07 · 多清单与项目` 对比：右侧标签不挤占正文高度；当前标签、窗口标题、事项列表和 Add task 归属一致；新建清单状态可辨认。
+- 与 Figma `08 · Task 与 Note` / `09 · Note 长内容状态板` 对比：Task/Note 混合列表、摘要上限、全文阅读顶部/底部、编辑滚动、预览、未保存确认、保存失败和草稿恢复状态一致。
 - 检查 100%、125%、150% Windows 缩放和高对比度模式。
 - 检查英文界面长文本、中文文本、Emoji、两行文本无裁切和重叠。
 
@@ -264,7 +272,7 @@ TodoList {
 
 ## 9. MVP 暂不实现
 
-多窗口、跨清单拖动事项、纯文本备忘区、事项标签与高级筛选、日期、提醒、优先级分数/颜色、云同步、账号登录、协作、搜索、统计、复杂设置页、跨设备同步。
+多窗口、跨清单拖动事项、事项标签与高级筛选、日期、提醒、优先级分数/颜色、云同步、账号登录、协作、搜索、统计、复杂设置页、跨设备同步。
 
 ## 10. 开发完成定义
 
